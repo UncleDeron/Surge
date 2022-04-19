@@ -78,7 +78,9 @@ function processMap(accountAttributesMap){
 
     accountAttributesMap['high-bitrate']['boolValue'] =true; // 新增
     accountAttributesMap['libspotify']['boolValue'] =true; // 新增
-    accountAttributesMap['can_use_superbird']['boolValue'] =true; // 新增
+    if (accountAttributesMap['can_use_superbird'] && accountAttributesMap['can_use_superbird']['boolValue']) {
+        accountAttributesMap['can_use_superbird']['boolValue'] =true; // 新增
+    }
     accountAttributesMap['offline']['boolValue'] =true; // 新增
 }
 
